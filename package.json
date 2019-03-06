@@ -5,15 +5,15 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --icon=assets/icon/icon.png --platform=linux --arch=x64 --electron-version=1.8.4 --overwrite --out dist/",
-    "deb64": "electron-installer-debian --config deb-config.json --arch amd64"
+    "build:package": "electron-packager . --icon=assets/icon/icon.png --platform=linux --arch=x64 --electron-version=1.8.4 --overwrite --out dist/",
+    "build:snap": "electron-installer-snap --src=dist/google-chat-linux-linux-x64"
   },
   "repository": "TODO",
   "author": "Roberto Fasciolo <rob@robyf.net> (https://www.robyf.net/)",
   "license": "WTFPL",
   "devDependencies": {
     "electron": "~1.8.4",
-    "electron-installer-debian": "^0.8.1",
+    "electron-installer-snap": "^3.1.1",
     "electron-packager": "^11.1.0"
   },
   "dependencies": {
